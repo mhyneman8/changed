@@ -89,7 +89,7 @@ a:hover a:focus {
   text-align: center;
   justify-content: center;
   text-shadow: 1px 2px var(--white);
-  background-color: rgba(0, 0, 0, 0.2);
+
   border-radius: 15px;
 }
 
@@ -233,6 +233,11 @@ p {
     margin: 5em auto;
     max-width: 900px;
   }
+@media and all (max-width: 500px) {
+  .plant_grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .item-a {
   grid-area: a;
@@ -253,12 +258,20 @@ p {
   grid-area: f;
   justify-content: end;
 }
+@media all and (max-width: 500px) {
+  .item-a,
+  .item-c,
+  .item-e,
+  .item-f {
+    max-height: 150px;
+  }
+}
 
   .picture_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 1000px;
     grid-template-areas:
       ". c c ."
@@ -285,6 +298,15 @@ p {
       "a ."
       "a c"
       "f ."
+    }
+  }
+  @media all and (max-width: 500px) {
+    .picture_grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "c"
+      "a"
+      "f"
     }
   }
 
@@ -355,6 +377,8 @@ p {
     margin: 0 auto;
     padding: 1rem;
     text-align: center;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
 .logo {
@@ -428,6 +452,16 @@ p {
   opacity: 1;
   padding: 10px;
 }
+@media all and (max-width: 750px) {
+  .know_img {
+    max-height: 250px;
+  }
+}
+@media all and (max-width: 500px) {
+  .know_img {
+    max-height: 150px;
+  }
+}
 
 #group {
   justify-content: flex-end;
@@ -440,7 +474,10 @@ p {
 }
 
 .touch_img {
-  text-align: center;
+  float: right;
+  margin: 15px;
+  max-height: 240px;
+  opacity: 0.9;
 }
 
 .get-to-know_header {
@@ -469,6 +506,8 @@ p {
     ),
     url(..//img/okra.jpg);
   background-size: 100% 750px;
+  /* how to make top fade in */
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   max-width: 1300px;
   margin: 60px auto;
@@ -480,8 +519,19 @@ p {
 .map {
   width: 400px;
   height: 250px;
+  display: block;
   text-align: right;
   padding: 10px;
+}
+
+.social-media {
+  height: 40px;
+}
+
+.forkfull_info p,
+.page-footer h3 {
+  color: var(--white);
+  text-shadow: 0 1px 0 black;
 }
 
 .page-footer {
