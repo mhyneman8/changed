@@ -25,6 +25,7 @@ body {
 }
 
 h1 {
+  display: inline-block;
   color: var(--blue);
   opacity: 1;
   font-family: 'Playfair Display', serif;
@@ -34,20 +35,23 @@ h1 {
   text-align: center;
   margin-top: 37px;
   margin-bottom: 8px;
+  z-index: 3;
 }
 
 h2 {
   text-align: center;
   font-size: 30px;
   color: var(--white);
-  text-shadow: 0 1px 0 black;
+  text-shadow: 2px 2px 4px #000;
   font-weight: 700;
-
+  margin: 10px;
+  z-index: 3;
 }
 
 h3 {
   text-align: center;
   font-weight: 700;
+  z-index: 3;
 }
 
 h4 {
@@ -57,6 +61,7 @@ h4 {
   font-weight: bold;
   text-shadow: 0 1px 0 black;
   opacity: 1;
+  z-index: 3;
 }
 
 a {
@@ -174,15 +179,28 @@ span {
 .recipes_body,
 .get-to-know_body,
 .get-in-touch_body {
-  background-color: var(--white);
-  opacity: 0.6;
+  position: relative;
+  display: flex;
+  justify-content: center;
   margin: 5em auto;
   max-width: 900px;
   padding: 40px;
-  border-radius: 3px;
-  -webkit-box-shadow: 9px 6px 10px 0px rgba(0,0,0,0.75);
-  box-shadow: 9px 6px 10px 0px rgba(0,0,0,0.75);
   z-index: 1;
+}
+  .home_body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--white);
+    opacity: 0.6;
+    border-radius: 3px;
+    -webkit-box-shadow: 9px 6px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 9px 6px 10px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+  }
 }
 
 @media all and (max-width: 750px) {
@@ -192,9 +210,11 @@ span {
 }
 
 p {
+  display: block;
   line-height: 2;
   margin: 40px 20px;
   font-size: 18px;
+  z-index: 3;
 }
 
 .plant_img {
@@ -224,6 +244,8 @@ p {
   opacity: 0.8;
 }
 
+
+
 @supports (display: grid) {
   .plant_grid,
   .recipes_grid {
@@ -241,30 +263,21 @@ p {
 
 .item-a {
   grid-area: a;
-  height: 300px;
-  align-self: end;
+  object-fit: fill;
 }
 
 .item-c {
   grid-area: c;
-  width: 285px;
-  height: 285px;
+  object-fit: fill;
 }
 
 .item-e {
   grid-area: e;
+  object-fit: fill;
 }
 .item-f {
   grid-area: f;
-  justify-content: end;
-}
-@media all and (max-width: 500px) {
-  .item-a,
-  .item-c,
-  .item-e,
-  .item-f {
-    max-height: 150px;
-  }
+  object-fit: fill;
 }
 
   .picture_grid {
@@ -279,17 +292,7 @@ p {
       "a . e ."
   }
 
-  @media all and (max-width: 885px) {
-    .picture_grid {
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-gap: 5px;
-      grid-template-areas:
-        ". c c"
-        "a c c"
-        "a . f "
-    }
-  }
-  @media all and (max-width: 710px) {
+  @media all and (max-width: 750px) {
     .picture_grid {
       grid-template-columns: 1fr 1fr;
       grid-gap: 1px;
@@ -334,7 +337,6 @@ p {
   }
 
   .picture_grid_item {
-    width: auto;
     text-align: center;
     border-radius: 3px;
     -webkit-box-shadow: 9px 6px 10px 0px rgba(0,0,0,0.55);
@@ -405,6 +407,7 @@ p {
   padding: 1rem;
   position: sticky;
   top: 0;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .food-grow_header {
@@ -412,7 +415,7 @@ p {
     linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.6)),
+      rgba(0, 0, 0, 0.8)),
       url(..//img/orange-grove.jpg);
   background-size: 100% 750px;
   background-repeat: no-repeat;
@@ -421,6 +424,7 @@ p {
   padding: 1rem;
   position: sticky;
   top: 0;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .recipes_header {
@@ -438,11 +442,27 @@ p {
   padding: 1rem;
   position: sticky;
   top: 0;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .recipes_img {
   border-radius: 3px;
   height: auto;
+  text-align: center;
+  width: 80%;
+  max-height: 300px;
+  margin: 40px auto;
+}
+
+.recipes_p {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.recipes-title {
+  color: var(--green);
+  text-shadow: 0 1px 0 black;
 }
 
 .know_img {
@@ -450,7 +470,7 @@ p {
   height: auto;
   max-height: 300px;
   opacity: 1;
-  padding: 10px;
+  padding: 20px;
 }
 @media all and (max-width: 750px) {
   .know_img {
@@ -495,6 +515,7 @@ p {
   padding: 1rem;
   position: sticky;
   top: 0;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .get-in-touch_header {
@@ -502,7 +523,7 @@ p {
     linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.6)
+      rgba(0, 0, 0, 0.8)
     ),
     url(..//img/okra.jpg);
   background-size: 100% 750px;
@@ -514,6 +535,7 @@ p {
   padding: 1rem;
   position: sticky;
   top: 0;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .map {
@@ -526,21 +548,23 @@ p {
 
 .social-media {
   height: 40px;
+  margin: 10px auto;
 }
 
 .forkfull_info p,
 .page-footer h3 {
   color: var(--white);
   text-shadow: 0 1px 0 black;
+  display: inline;
+  margin-top: 5px;
 }
 
-.page-footer {
+footer {
   clear: both;
   display: block;
   background: #3F2D1F;
   flex-direction: column;
   position: relative;
-  bottom: 0;
   height: 150px;
   background-color: var(--brown);
   text-align: center;
