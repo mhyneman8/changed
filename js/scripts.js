@@ -1,13 +1,4 @@
 
-let messSec = document.querySelector('.get-in-touch_body');
-let messBtn = document.createElement('button');
-
-messBtn.innerText = 'Get Invovled';
-messBtn.classList.add = 'button';
-
-messSec.appendChild(messBtn);
-
-
 formBtn.addEventListener('click', function() {
     var form = document.getElementById('form');
     if (form.style.display === 'none') {
