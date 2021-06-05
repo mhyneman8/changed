@@ -43,13 +43,13 @@ h1 {
 }
 @media all and (max-width: 500px) {
   h1 {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--white);
   text-shadow: 0.125rem 0.125rem 0.25rem #000;
   font-weight: 700;
@@ -58,7 +58,7 @@ h2 {
 }
 @media all and (max-width: 400px) {
   h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -110,15 +110,15 @@ a:hover a:focus {
     z-index: 100;
   }
   main {
-    margin-top: 95px;
+    margin-top: 5.9375rem;
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
-    height: 35.008px;
-    margin-top: 10px;
-    margin-right: 8px;
+    height: 2.188rem;
+    margin-top: 0.625rem;
+    margin-right: 0.5rem;
     border: none;
   }
   .main-navigation {
@@ -126,11 +126,11 @@ a:hover a:focus {
   }
 
   .dropbtn {
-    height: 36px;
+    height: 2.25rem;
     margin-top: 0.5rem;
-    margin-right: -105px;
+    margin-right: -6.5625rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     object-fit: cover;
   }
 
@@ -142,7 +142,7 @@ a:hover a:focus {
   .dropdown-content {
     display: none;
     position: absolute;
-    right: -72px;
+    right: -4.5rem;
     border-radius: 0.188rem;
     background-color: var(--white);
     min-width: 6.25rem;
@@ -269,7 +269,7 @@ span {
   .button {
     width: 12.5rem;
     display: block;
-    margin: 30px auto;
+    margin: 1.875rem auto;
     padding: 0;
     text-align: center;
   
@@ -361,7 +361,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.9375rem;
     margin: 5em auto;
-    max-width: 1000px;
+    max-width: 62.5rem;
   }
 
   .picture_grid {
@@ -370,7 +370,7 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 1.875rem auto;
-    max-width: 850px;
+    max-width: 53.125rem;
     width: 70%
   }
 @media all and (max-width: 500px) {
@@ -504,7 +504,7 @@ p {
 }
 
 .header-img {
-  border-bottom: 4px solid var(--green);
+  border-bottom: 0.25rem solid var(--green);
   height: 6.5625rem;
   z-index: 101;
   filter: grayscale(20%);
@@ -513,7 +513,7 @@ p {
   top: 0;
 }
 .page-header {
-    max-width: 1300px;
+    max-width: 81.25rem;
     list-style-type: none;
     text-decoration: none;
     margin: 0 auto;
@@ -537,8 +537,8 @@ p {
 
 .logo {
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-left: 4%;
   margin-top: 1.25rem;
 }
@@ -579,17 +579,17 @@ p {
   .home-header {
     position: relative;
     z-index: 1;
-    height: 75px;
+    height: 4.6875rem;
     margin: 0 auto;
   }
 }
 @media all and (min-width: 1200px) {
   .home-header {
-    height: 130px;
+    height: 8.125rem;
   }
   .section-header__item,
   .navigation-list {
-    margin: 6px auto;
+    margin: 0.375rem auto;
     font-size: 1.65rem;
   }
 }
@@ -604,24 +604,24 @@ p {
   background-blend-mode: overlay;
   background-size: 100% 46.875rem;
   background-repeat: no-repeat;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 3.75rem auto;
   padding: 1rem;
   position: sticky;
   top: 0;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000;
 }
 @media all and (max-width: 500px) {
   .food-grow_header {
     position: relative;
     z-index: 1;
-    height: 75px;
+    height: 4.6875rem;
     margin: 0 auto;
   }
 }
 @media all and (min-width: 1200px) {
   .food-grow_header {
-    height: 130px;
+    height: 8.125rem;
   }
 }
 
@@ -635,7 +635,7 @@ p {
       url(..//img/carrots.jpg);
   background-size: 100% 46.875rem;
   background-repeat: no-repeat;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 3.75rem auto;
   padding: 1rem;
   position: sticky;
@@ -647,7 +647,7 @@ p {
   .recipes_header {
     position: relative;
     z-index: 1;
-    height: 75px;
+    height: 4.6875rem;
     margin: 0 auto;
   }
 
@@ -657,7 +657,7 @@ p {
 }
 @media all and (min-width: 1200px) {
   .recipes_header {
-    height: 130px;
+    height: 8.125rem;
   }
 }
 
@@ -673,19 +673,19 @@ p {
 @media all and (max-width: 400px) {
   .recipes_img {
     width: 100%;
-    max-height: 150px;
+    max-height: 9.375rem;
   }
 }
 
 .recipes-title {
   color: var(--green);
-  text-shadow: 0 1px 0 black;
+  text-shadow: 0 0.0625rem 0 black;
 }
 
 .know_img {
   border-radius: 0.1875rem;
   height: auto;
-  max-height: 300px;
+  max-height: 18.75rem;
   opacity: 1;
   padding: 1.25rem;
 }
@@ -725,13 +725,13 @@ p {
   float: right;
   margin: 0.9375rem;
   margin-left: 1.875rem;
-  max-height: 240px;
+  max-height: 15rem;
   opacity: 0.9;
 }
 
 @media all and (max-width: 400px) {
   .touch_img {
-    width: 200px;
+    width: 12.5rem;
     float: none;
     margin: 0.125rem;
     padding: 0;
@@ -744,12 +744,12 @@ p {
 }
 
 #message {
-  margin: 20px auto;
-  padding: 10px;
+  margin: 1.25rem auto;
+  padding: 0.625rem;
 }
 #email {
-  margin: 10px auto;
-  
+  margin: 0.625rem auto;
+
 }
 
 .visible {
@@ -766,7 +766,7 @@ p {
     url(..//img/picking.jpg);
   background-size: 100% 46.875rem;
   background-repeat: no-repeat;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 3.75rem auto;
   padding: 1rem;
   position: sticky;
@@ -786,7 +786,7 @@ p {
   /* how to make top fade in */
   box-shadow: inset 0.0625rem 0.125rem 0.1875rem rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 3.75rem auto;
   padding: 1rem;
   position: sticky;
@@ -799,14 +799,14 @@ p {
   .get-in-touch_header {
     position: relative;
     z-index: 1;
-    height: 75px;
+    height: 4.6875rem;
     margin: 0 auto;
   }
 }
 @media all and (min-width: 1200px) {
   .get-to-know_header,
   .get-in-touch_header {
-    height: 130px;
+    height: 8.125rem;
   }
 }
 
