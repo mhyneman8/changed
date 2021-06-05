@@ -21,4 +21,3 @@ function loadEvents() {
         updateMailString();
     }
 }
-console.log('i work');

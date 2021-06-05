@@ -41,9 +41,9 @@ h1 {
   margin-bottom: 0.5rem;
   z-index: 3;
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
   h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 
@@ -98,8 +98,81 @@ a:hover a:focus {
 
 }
 
+.dropdown {
+  display: none;
+}
+@media all and (max-width: 500px) {
+
+  .page-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  main {
+    margin-top: 95px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    height: 35.008px;
+    margin-top: 10px;
+    margin-right: 8px;
+    border: none;
+  }
+  .main-navigation {
+    display: none;
+  }
+
+  .dropbtn {
+    height: 36px;
+    margin-top: 0.5rem;
+    margin-right: -105px;
+    border: none;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: -72px;
+    border-radius: 0.188rem;
+    background-color: var(--white);
+    min-width: 6.25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: var(--brown);
+    padding: 0.625rem 0.875rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    color: var(--green);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    opacity: 0.5;
+  }
+}
+
 .background {
-  background: url(../img/bark.jpg) rgba(255, 255, 255, 0.3);
+  background: url(../img/bark.jpg) rgba(255, 255, 255, 0.4);
   background-blend-mode: overlay;
   width: 100%;
   background-attachment: fixed;
@@ -136,6 +209,13 @@ span {
   margin: 0 auto;
 }
 
+@media all and (max-width: 500px) {
+  .section-header__item {
+    display: none;
+  }
+
+}
+
 .main-navigation__item {
   display: flex;
   flex-direction: row;
@@ -163,9 +243,9 @@ span {
   display: inline-block;
 }
 
-.dropdown {
+/* .dropdown {
   display: none;
-}
+} */
 
 .button {
   border: none;
@@ -226,6 +306,7 @@ span {
   .get-to-know_body,
   .get-in-touch_body {
     width: 90%;
+    margin: 1rem auto;
   }
 }
 
@@ -234,7 +315,7 @@ span {
 }
 
 .container {
-  width: 50rem;
+  width: 90%;
   cursor: pointer;
 }
 
@@ -274,27 +355,25 @@ p {
   opacity: 0.8;
 }
 
-
-
 @supports (display: grid) {
-  .plant_grid,
-  .recipes_grid {
+  .plant_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.9375rem;
     margin: 5em auto;
-    max-width: 56.25rem;
+    max-width: 1000px;
   }
+
   .picture_grid {
     display: grid;
     grid-gap: 0.9375rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 1.875rem auto;
-    max-width: 900px;
+    max-width: 850px;
     width: 70%
   }
-@media and all (max-width: 500px) {
+@media all and (max-width: 500px) {
   .plant_grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -317,6 +396,7 @@ p {
 .item-f {
   grid-area: f;
   object-fit: fill;
+}
 }
 
 .picture_grid img {
@@ -372,7 +452,6 @@ p {
     display: inline;
     background-color: var(--white);
     opacity: 0.8;
-    width: 18.75rem;
     min-height: auto;
     padding: 0.3125rem;
     text-align: center;
@@ -380,9 +459,9 @@ p {
     -webkit-box-shadow: 0.5625rem 0.375rem 0.625rem 0rem rgba(0,0,0,0.55);
     box-shadow: 0.5625rem 0.375rem 0.625rem 0rem rgba(0,0,0,0.55);
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 500px) {
     .plant_grid_item {
-      width: 18.125rem;
+      width: 74vw;
       margin: 0 auto;
     }
   }
@@ -449,6 +528,12 @@ p {
       rgba(0, 0, 0, 0.6));
     background-color: rgba(0, 0, 0, 0.4);
   }
+@media all and (max-width: 500px) {
+  .page-header {
+    height: 5.125rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
 
 .logo {
   float: left;
@@ -457,7 +542,7 @@ p {
   margin-left: 4%;
   margin-top: 1.25rem;
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
   .logo {
     width: 1.875rem;
     height: 1.875rem;
@@ -490,6 +575,25 @@ p {
   text-shadow: 0.125rem 0.125rem 0.25rem #000;
 }
 
+@media all and (max-width: 500px) {
+  .home-header {
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 1200px) {
+  .home-header {
+    height: 130px;
+  }
+  .section-header__item,
+  .navigation-list {
+    margin: 6px auto;
+    font-size: 1.65rem;
+  }
+}
+
 .food-grow_header {
   background:
     linear-gradient(
@@ -506,6 +610,19 @@ p {
   position: sticky;
   top: 0;
   text-shadow: 2px 2px 4px #000;
+}
+@media all and (max-width: 500px) {
+  .food-grow_header {
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 1200px) {
+  .food-grow_header {
+    height: 130px;
+  }
 }
 
 .recipes_header {
@@ -526,10 +643,21 @@ p {
   text-shadow: 0.125rem 0.125rem 0.25rem #000;
 }
 
-@media all and (max-width: 400px) {
-  
+@media all and (max-width: 500px) {
+  .recipes_header {
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    margin: 0 auto;
+  }
+
   .container {
     width: 100%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .recipes_header {
+    height: 130px;
   }
 }
 
@@ -537,8 +665,8 @@ p {
   border-radius: 0.1875rem;
   height: auto;
   text-align: center;
-  width: 500px;
-  max-height: 300px;
+  width: 31.25rem;
+  max-height: 12.5rem;
   margin: 2.5rem auto;
 }
 
@@ -581,6 +709,7 @@ p {
 #picnic {
   float: right;
 }
+
 @media all and (max-width: 400px) {
   #group2,
   #picnic {
@@ -592,7 +721,6 @@ p {
   }
 }
 
-
 .touch_img {
   float: right;
   margin: 0.9375rem;
@@ -600,6 +728,7 @@ p {
   max-height: 240px;
   opacity: 0.9;
 }
+
 @media all and (max-width: 400px) {
   .touch_img {
     width: 200px;
@@ -611,6 +740,16 @@ p {
 
 .form {
   display: none;
+  justify-content: center;
+}
+
+#message {
+  margin: 20px auto;
+  padding: 10px;
+}
+#email {
+  margin: 10px auto;
+  
 }
 
 .visible {
@@ -655,6 +794,22 @@ p {
   text-shadow: 0.125rem 0.125rem 0.25rem #000;
 }
 
+@media all and (max-width: 500px) {
+  .get-to-know_header,
+  .get-in-touch_header {
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 1200px) {
+  .get-to-know_header,
+  .get-in-touch_header {
+    height: 130px;
+  }
+}
+
 .margin {
   margin-bottom: 3.75rem;
   margin-top: 1.875rem;
@@ -667,6 +822,7 @@ p {
   text-align: right;
   padding: 0.625rem;
 }
+
 @media all and (max-width: 400px) {
   .map {
     width: 12.5rem;
