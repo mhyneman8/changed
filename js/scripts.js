@@ -1,4 +1,5 @@
 
+// show form on get involved click
 formBtn.addEventListener('click', function() {
     var form = document.getElementById('form');
     if (form.style.display === 'none') {
@@ -7,7 +8,6 @@ formBtn.addEventListener('click', function() {
         form.style.display = 'none';
     }
 });
-
 
 
 function loadEvents() {
